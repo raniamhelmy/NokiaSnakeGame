@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white__color: #fff;
+  --black__color: #000;
+  --fontMonospace: monospace, sans-serif;
+  --snake__color: #0a6522;
+  --apple__color: #800808;
+  --score__color: #282828;
+}
+
+body {
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 216, 1, 0.288000700280112) 0%,
+      rgba(255, 216, 1, 0.5707457983193278) 1%
+    ),
+    url("https://media.istockphoto.com/id/1170045852/vector/egypt-desert-landscape-with-pyramids.jpg?s=170667a&w=0&k=20&c=rzAwenutJPHU8ghK6fIrcQ4PahbeHJGraqCHFSFvNtE=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--black__color);
+  font-family: var(--fontMonospace);
+  height: 80vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/**************************************Game Style**********************************************/
+
+.score{
+  font-family: var(--fontMonospace);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--score__color);
+}
+
+.gameGrid__container{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  /*transition: top 0.2s , bottom 0.2s, left 0.2s, right 0.2s;*/
+}
+
+.gameGrid__container div{
+  background-color: var(--white__color);
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(0,0,0,.02);
+}
+
+.snakeBody{
+  background-color: var(--snake__color)!important;
+}
+
+.appleBlock{
+  background-color: var(--apple__color)!important;
+}
+
+/***********************************Sweet Alert2 Optimization*********************************/
+.swal2-container.swal2-backdrop-show,
+.swal2-container.swal2-noanimation {
+  background: rgba(0, 0, 0, 0.99);
+}
+
+.swal2-styled.swal2-confirm{
+  background-color: var(--snake__color);
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: none;
+}
+
+/*******************************************RWD Section*****************************************/
+
+@media screen and (max-width: 425.9808px) {
+}
